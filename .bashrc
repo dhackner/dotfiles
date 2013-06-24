@@ -157,6 +157,8 @@ dvcs_function="
 
 PS1="\u:\W\$(${dvcs_function})\[$COLOR_RESET\] \$ "
 
+source ~/dotfiles/vagrant-completion.sh
+
 # Setup specific to individual clients
 PROJECT_DIR=~
 source ~/dotfiles/.bash_work_setup
