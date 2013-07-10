@@ -1,0 +1,67 @@
+" colorscheme
+if has("gui_running")
+  let g:solarized_termcolors=256
+  set t_Co=256
+  set background=light
+else
+  set background=dark
+endif
+colorscheme solarized
+
+" ctrl-p including refresh
+nnoremap <silent> <D-t> :ClearCtrlPCache<cr>\|:CtrlP<cr>
+set wildignore+=*/venv/*
+
+call janus#add_mapping('nerdtree', 'map', '<leader>nn', ':NERDTreeToggle<CR>')
+call janus#add_mapping('nerdtree', 'map', '<leader>nf', ':NERDTreeFind<CR>')
+
+set mouse=a
+
+autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
+"autocmd FileType python setlocal expandtab shiftwidth=2 softtabstop=2
+
+" <Ctrl-l> redraws the screen and removes any search highlighting.
+nnoremap <silent> <C-l> :nohl<CR><C-l>
+
+" Folding l33tness
+set foldmethod=indent
+set foldnestmax=1
+nnoremap <space> za
+vnoremap <space> zf
+
+
+" Split navigations
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
+
+set splitbelow
+set splitright
+
+" Reminders
+"Max out the height of the current split
+"ctrl + w _
+
+"Max out the width of the current split
+"ctrl + w |
+
+"Normalize all split sizes, which is very handy when resizing terminal
+"ctrl + w =
+
+"Swap top/bottom or left/right split
+"Ctrl+W R
+
+"Break out current window into a new tabview
+"Ctrl+W T
+
+"Close every window in the current tabview but the current one
+"Ctrl+W o
+
+" Wrap at 72 chars for comments.
+set formatoptions=cq textwidth=72 foldignore= wildignore+=*.py[co]
+
+" Use :make to see syntax errors. (:cn and :cp to move around, :dist to see all errors)
+set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\"
+set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
+

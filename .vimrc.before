@@ -1,0 +1,5 @@
+call janus#disable_plugin('syntastic')
+
+set encoding=UTF-8
+set guifont=Menlo-ForPowerline-Powerline
+let g:Powerline_symbols = 'fancy'
