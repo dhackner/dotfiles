@@ -24,8 +24,6 @@ autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
 " Folding l33tness
-set foldmethod=indent
-set foldnestmax=1
 nnoremap <space> za
 vnoremap <space> zf
 
@@ -62,6 +60,7 @@ set splitright
 set formatoptions=cq textwidth=72 foldignore= wildignore+=*.py[co]
 
 " Use :make to see syntax errors. (:cn and :cp to move around, :dist to see all errors)
-set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\"
-set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
+"set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\"
+"set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 
+let g:pymode_lint_ignore = "E501"
