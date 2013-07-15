@@ -64,3 +64,9 @@ set formatoptions=cq textwidth=72 foldignore= wildignore+=*.py[co]
 "set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 
 let g:pymode_lint_ignore = "E501"
+
+" See - https://github.com/kien/ctrlp.vim
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](dist-packages|node_modules)[\/]\v',
+  \ }
+
