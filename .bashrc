@@ -163,3 +163,5 @@ source ~/dotfiles/vagrant-completion.sh
 PROJECT_DIR=~
 source ~/dotfiles/.bash_work_setup
 cd $PROJECT_DIR
+
+export ACKRC=".ackrc" # Check local directory .ackrc file
