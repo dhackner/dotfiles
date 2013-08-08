@@ -65,7 +65,8 @@ set formatoptions=cq textwidth=72 foldignore= wildignore+=*.py[co]
 "set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\"
 "set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 
-let g:pymode_lint_ignore = "E501"
+let g:pymode_lint_checker = "pyflakes,pep8"
+let g:pymode_lint_ignore = "E501,C901"
 
 " See - https://github.com/kien/ctrlp.vim
 let g:ctrlp_custom_ignore = {
