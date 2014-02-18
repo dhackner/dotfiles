@@ -9,7 +9,7 @@ then
   source $ssh_agent > /dev/null
 fi
 
-# General aliases
+# General aliases and functions
 alias ..='cd ..'
 alias l.='ls -G -d .*'
 alias ll='ls -G -l'
@@ -17,7 +17,13 @@ alias ls='ls -G'
 alias vi='vim'
 alias which='alias | /usr/bin/which'
 alias rfind='find -L . -iname '
-alias rgrep='grep -ri --exclude="tags" --exclude="*pyc" --color=auto '
+alias vssh='vagrant ssh'
+function rgrep {
+  local LOCATION="."
+  if [ -n "$2" ]; then LOCATION="$2"; fi
+  grep -ri --exclude="tags" --exclude="*.pyc" --exclude-dir=".git" --exclude="*.log" --exclude="*.log.[0-9]*" --color=auto "$1" $LOCATION;
+}
+export -f rgrep
 
 # DB
 alias startmysql='mysql.server start'
