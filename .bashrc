@@ -21,7 +21,7 @@ alias vssh='vagrant ssh'
 function rgrep {
   local LOCATION="."
   if [ -n "$2" ]; then LOCATION="$2"; fi
-  grep -ri --exclude="tags" --exclude="*.pyc" --exclude-dir=".git" --exclude="*.log" --exclude="*.log.[0-9]*" --color=auto "$1" $LOCATION;
+  grep -rin --exclude="tags" --exclude="*.pyc" --exclude-dir=".git" --exclude="*.log" --exclude="*.log.[0-9]*" --color=auto "$1" $LOCATION;
 }
 export -f rgrep
 
