@@ -171,3 +171,5 @@ source ~/dotfiles/.bash_work_setup
 cd $PROJECT_DIR
 
 export ACKRC=".ackrc" # Check local directory .ackrc file
+
+alias edit-bash='vi ~/dotfiles/.bash_work_setup'
