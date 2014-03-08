@@ -16,7 +16,10 @@ alias ll='ls -G -l'
 alias ls='ls -G'
 alias vi='vim'
 alias which='alias | /usr/bin/which'
-alias rfind='find -L . -iname '
+function rfind {
+  find -L -X . -iregex .*$1
+}
+export -f rfind
 alias vssh='vagrant ssh'
 function rgrep {
   local LOCATION="."
