@@ -87,5 +87,5 @@ let sh_fold_enabled=1         " sh
 let vimsyn_folding='af'       " Vim script
 let xml_syntax_folding=1      " XML
 
-" Mark 80 char limit
-set colorcolumn=80
+" Mark 90 char limit
+set colorcolumn=90
