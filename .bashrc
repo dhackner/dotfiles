@@ -17,7 +17,7 @@ alias ls='ls -G'
 alias vi='vim'
 alias which='alias | /usr/bin/which'
 function rfind {
-  find -L -X . -iregex .*$1
+  find -L . ! -path "./.vagrant/*" ! -path "./.git/*" -iregex .*$1
 }
 export -f rfind
 alias vssh='vagrant ssh'
