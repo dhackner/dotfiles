@@ -65,16 +65,23 @@ set formatoptions=cq textwidth=72 foldignore= wildignore+=*.py[co]
 "set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\"
 "set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 
+let g:pymode_run = 0
+let g:pymode_lint = 1
 let g:pymode_lint_checker = "pyflakes,pep8"
 let g:pymode_lint_ignore = "E501,C901"
+let g:pymode_lint_on_fly = 1
+let g:pymode_lint_message = 1
+let g:pymode_folding = 1
+
+let g:pymode_rope = 0
+
+
 
 " See - https://github.com/kien/ctrlp.vim
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](dist-packages|node_modules)[\/]\v',
   \ }
 
-let g:pymode_rope = 0
-let g:pymode_breakpoint_key = '<c-b>'
 
 set foldmethod=syntax
 
