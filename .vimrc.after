@@ -18,6 +18,7 @@ call janus#add_mapping('nerdtree', 'map', '<leader>nf', ':NERDTreeFind<CR>')
 set mouse=a
 
 filetype plugin indent on
+autocmd FileType html setlocal expandtab shiftwidth=4 softtabstop=4
 autocmd FileType javascript setlocal expandtab shiftwidth=4 softtabstop=4
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 "autocmd FileType python setlocal expandtab shiftwidth=2 softtabstop=2
