@@ -85,6 +85,7 @@ let g:ctrlp_custom_ignore = {
 
 
 set foldmethod=syntax
+set foldnestmax=3
 
 let javaScript_fold=1         " JavaScript
 let perl_fold=1               " Perl
