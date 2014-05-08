@@ -97,3 +97,5 @@ let xml_syntax_folding=1      " XML
 
 " Mark 90 char limit
 set colorcolumn=90
+
+let g:ackprg = 'ag --nogroup --nocolor --column'
