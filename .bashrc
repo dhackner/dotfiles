@@ -37,10 +37,6 @@ alias stoppostgres='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 # Python
 PYTHONPATH=/Library/Python/2.7/site-packages:$PYTHONPATH
 
-# Ruby / Rails
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-alias migrate='rake db:migrate && rake db:test:prepare'
-
 # Node
 NODE_PATH=/usr/local/lib/node_modules
 PATH=$PATH:$NODE_PATH
