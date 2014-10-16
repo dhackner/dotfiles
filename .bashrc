@@ -42,7 +42,8 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 alias migrate='rake db:migrate && rake db:test:prepare'
 
 # Node
-NODEPATH=/usr/local/lib/node_modules
+NODE_PATH=/usr/local/lib/node_modules
+PATH=$PATH:$NODE_PATH
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
