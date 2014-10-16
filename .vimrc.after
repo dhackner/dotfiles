@@ -100,3 +100,6 @@ let xml_syntax_folding=1      " XML
 set colorcolumn=90
 
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+call janus#add_mapping('ctrlp', 'map', '<D-y>', ':CtrlPTag<CR>')
+call janus#add_mapping('ctrlp', 'imap', '<D-y>', '<ESC>:CtrlPTag<CR>')
