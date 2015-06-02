@@ -95,6 +95,7 @@ PATH=$PATH:$NODE_PATH
 
 
 
+. `brew --prefix`/etc/profile.d/z.sh
 
 
 HISTFILESIZE=2500
