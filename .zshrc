@@ -60,8 +60,10 @@ source $ZSH/oh-my-zsh.sh
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
+  export VISUAL='vim'
 else
   export EDITOR='mvim'
+  export VISUAL='vim'
 fi
 
 # Compilation flags
