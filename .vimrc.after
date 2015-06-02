@@ -70,8 +70,8 @@ set formatoptions=cq textwidth=72 foldignore= wildignore+=*.py[co]
 let g:pymode_run = 0
 let g:pymode_lint = 1
 let g:pymode_lint_checker = "pyflakes,pep8"
-let g:pymode_lint_on_fly = 1
-let g:pymode_lint_ignore = "E125,E127,E502,E501,C901"
+let g:pymode_lint_ignore = "E125,E127,E128,E502,E501,C901,E265"
+let g:pymode_lint_on_fly = 0
 let g:pymode_lint_message = 1
 let g:pymode_folding = 1
 
